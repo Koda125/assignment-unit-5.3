@@ -16,7 +16,7 @@ function addToCollection(collection, title, artist, yearPublished){
 
 addToCollection(myCollection, 'American Idiot', 'Green Day', 2004);
 console.log(myCollection);
-addToCollection(myCollection, 'So Wrong, Its Right', 'All Time Low', 2008)
+addToCollection(myCollection, 'The Beautiful and Damned', 'G-Eazy', 2017)
 console.log(myCollection);
 addToCollection(myCollection, 'Disgusting', 'Beartooth', 2015)
 console.log(myCollection)
@@ -27,7 +27,34 @@ console.log(myCollection)
 addToCollection(myCollection, 'General Admission', 'MGK', 2015)
 console.log(myCollection)
 
+function showCollection(collection){
+  // create a loop that cycles through the argument clause array.
+  for ( i=0; i < collection.length; i++){
+    //console log each item in array
+    console.log(collection[i].title, ' by ', collection[i].artist, ' published in ', collection[i].yearPublished);
+  }
+  //return each found item.
+  return collection;
+}
+console.log(showCollection(myCollection));
 
+function findByArtist(collection, artist){
+  //Declare an empty Array
+  let matchingArtistByAlbum = [];
+  //loop through a collection and push found title into empty array
+  for ( i=0; i < collection.length; i++ ){
+    if (collection[i].artist === artist){
+      matchingArtistByAlbum.push(collection[i])
+    }
+  }
+  //return the array.
+  return matchingArtistByAlbum;
+
+  
+}
+console.log(findByArtist(myCollection, 'MGK'));
+console.log(findByArtist(myCollection, 'G-Eazy'));
+console.log(findByArtist(myCollection, 'AFI'))
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
