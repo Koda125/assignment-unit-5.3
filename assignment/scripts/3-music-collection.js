@@ -31,7 +31,7 @@ function showCollection(collection){
   // create a loop that cycles through the argument clause array.
   for ( i=0; i < collection.length; i++){
     //console log each item in array
-    console.log(collection[i].title, ' by ', collection[i].artist, ' published in ', collection[i].yearPublished);
+    console.log(`By ${collection[i].title} ${collection[i].artist}  published in  ${collection[i].yearPublished}`);
   }
   //return each found item.
   return collection;
